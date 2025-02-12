@@ -11,6 +11,9 @@ $link-decoration: none;
 // 4. Include any default map overrides here
 $custom-colors: (
 	"farve": $cyan-400,
+	"qBlaa": #3a6fb0,
+	"qRod": #e63946,
+	"qGraa": #f4f4f7,
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);
@@ -18,3 +21,6 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 @import "bootstrapComponents";
 
 // 5. Du kan lave styling her...
+body{
+	//font-family: merrywethersans;
+}
