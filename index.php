@@ -20,30 +20,42 @@ require "settings/init.php";
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-
+<!--
+.▄▄▄  ▄• ▄▌▪   ▄▄· ▄ •▄
+▐▀•▀█ █▪██▌██ ▐█ ▌▪█▌▄▌▪
+█▌·.█▌█▌▐█▌▐█·██ ▄▄▐▀▀▄·
+▐█▪▄█·▐█▄█▌▐█▌▐███▌▐█.█▌
+·▀▀█.  ▀▀▀ ▀▀▀·▀▀▀ ·▀  ▀
+·▄▄▄▄  ▄▄▄   ▄▄▄· ▄▄▌ ▐ ▄▌
+██▪ ██ ▀▄ █·▐█ ▀█ ██· █▌▐█
+▐█· ▐█▌▐▀▀▄ ▄█▀▀█ ██▪▐█▐▐▌
+██. ██ ▐█•█▌▐█ ▪▐▌▐█▌██▐█▌
+▀▀▀▀▀• .▀  ▀ ▀  ▀  ▀▀▀▀ ▀▪
+-->
 <body>
 
 <nav class="bg-black d-flex justify-content-between p-3 pb-5">
-    <a href="#"><img src="images/whitelogo.png" alt="Logo" width="179" height="75"></a>
-    <div class="d-flex justify-content-between align-items-center w-25">
+    <a href="#" class="d-none d-md-block"><img src="images/whitelogo.png" alt="Logo" width="179" height="75"></a>
+    <a href="#" class="d-md-none"><img src="images/QuickDrawLogoWhite.png" alt="Logo" width="72" height="75"></a>
+    <div class="d-flex justify-content-between align-items-center w-md-25 gap-3">
         <a href="#" class="text-white">Log ind</a>
-        <a href="registrer.php" class="rounded-4 bg-primary p-2 pe-3 ps-3 text-white">Tilmeld</a>
+        <a href="registrer.php" class="rounded-3 bg-primary p-2 pe-3 ps-3 text-white">Tilmeld</a>
     </div>
 </nav>
 
-<div class="bg-black container-fluid">
+<div class="bg-black container-fluid pb-5">
     <div class="row text-center pt-5 pb-5">
         <h1 class="text-white">Gør dine bookinger og aktivitet registreringer lette<br>og kom i gang med det samme!</h1>
         <p class="text-white">QUICK DRAW hjælper dine medlemmer for nem og hurtig registrering af aktivitet<br>ved bare et simpelt tryk</p>
     </div>
 
-    <div class="row mt-5 justify-content-center pb-5">
-        <div class="col-2 text-center">
-            <a href="#" class="bg-primary p-2 pe-3 ps-3 text-white rounded-2 fs-3">Tilmeld dig nu!</a>
+    <div class="row justify-content-center gap-5">
+        <div class="col-12 col-md-4 text-center">
+            <a href="#" class="bg-primary text-white p-2 pe-3 ps-3 text-nowrap rounded-3 fs-3">Tilmeld dig nu!</a>
         </div>
 
-        <div class="col-2 text-center">
-            <a href="#" class="text-white fs-3  ">Find bookninger</a>
+        <div class="col-12 col-md-4 text-center">
+            <a href="#" class="text-white fs-3">Find bookninger &#x21e8;</a>
         </div>
     </div>
 </div>
