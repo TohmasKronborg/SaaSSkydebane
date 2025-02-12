@@ -26,9 +26,6 @@ require "settings/init.php";
 <h1>Det virker 🥳</h1>
 <p>dette er en test 3</p>
 <p>Din mor</p>
-<button type="button" class="btn btn-primary" onclick="chromeBomb()">Chrome Bomb 🗿</button>
-
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
