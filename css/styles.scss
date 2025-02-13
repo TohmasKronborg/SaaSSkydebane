@@ -48,10 +48,18 @@ body {
 	.landPageFS{
 		font-size: 26px;
 	}
+	.QDFormaal{
+		font-size: 24px;
+		line-height: 32px;
+	}
 }
 
 @media screen and (min-width: 992px) { // Det her er et lg breakpoint
 	.landPageFS{
 		font-size: 32px;
 	}
+	.maxImgSize{
+		max-width: 300px;
+	}
+
 }
