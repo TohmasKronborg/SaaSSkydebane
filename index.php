@@ -32,9 +32,9 @@ require "settings/init.php";
 ██. ██ ▐█•█▌▐█ ▪▐▌▐█▌██▐█▌
 ▀▀▀▀▀• .▀  ▀ ▀  ▀  ▀▀▀▀ ▀▪
 -->
-<body class="bg-qGraa position-relative">
+<body class="position-relative">
 
-<nav class="bg-black d-flex justify-content-between p-3 position-sticky top-0">
+<nav class="bg-black d-flex justify-content-between p-3 position-sticky top-0 mb-5 z-1">
     <a href="#" class="d-none d-md-block"><img src="images/whitelogo.png" alt="Logo" width="138" height="58"></a>
     <a href="#" class="d-md-none"><img src="images/QuickDrawLogoWhite.png" alt="Logo" width="38" height="40"></a>
     <div class="d-flex justify-content-between align-items-center w-md-25 gap-3">
@@ -43,21 +43,27 @@ require "settings/init.php";
     </div>
 </nav>
 
-<div class="bg-black container-fluid pb-5">
+<div class="container-fluid pb-5 blackBox">
     <div class="row text-center pt-5 pb-5">
         <h1 class="text-white landPageFS">Gør dine bookinger og aktivitet registreringer lette<br>og kom i gang med det samme!</h1>
-        <p class="text-white ">QUICK DRAW hjælper dine medlemmer for nem og hurtig registrering af aktivitet<br>ved bare et simpelt tryk</p>
+        <p class="text-white-50 ">QUICK DRAW hjælper dine medlemmer for nem og hurtig registrering af aktivitet<br>ved bare et simpelt tryk</p>
     </div>
 
-    <div class="row justify-content-center gap-5 mb-1">
+    <div class="row justify-content-center gap-5">
         <div class="col-12 col-md-4 text-center">
-            <a href="#" class="bg-qBlaa text-white p-2 pe-3 ps-3 text-nowrap rounded-3 fs-3">Tilmeld dig nu!</a>
+            <a href="#" class="bg-qBlaa text-white p-4 text-nowrap rounded-3 fs-4">Tilmeld dig nu &#x21c0;</a>
         </div>
 
         <div class="col-12 col-md-4 text-center">
-            <a href="#" class="text-white fs-3">Find bookninger &#x21e8;</a>
+            <a href="#" class="text-white fs-4">Find bookninger &#x21c0;</a>
         </div>
     </div>
+</div>
+
+<div class="d-flex justify-content-center p-3 isolation position-relative">
+    <img class="img-fluid d-none d-lg-block rounded-4 me-4" src="images/+.jpg" alt="chad" width="491" height="550">
+    <img class="img-fluid d-none d-lg-block position-absolute start-75 top-50 translate-middle" src="images/Bliss1.png" alt="bliss">
+    <img class="img-fluid d-lg-none" src="images/Bliss1.png" alt="bliss">
 </div>
 
 <div class="overflow-x-hidden"> <!-- Blue waves section -->
@@ -67,7 +73,7 @@ require "settings/init.php";
     <div class="bg-qBlaa container-fluid p-3">
         <div class="row pe-md-5 ps-md-5 ">
             <div class="col-12 col-md-7 d-flex align-items-center">
-                <p class="text-qGraa text-center mb-4 QDFormaal">
+                <p class="text-qGraa text-center mb-4 QDFormaal slide-in-element">
                     <strong>QUICK DRAW</strong> har til formål at gøre det nemt og hurtigt for medlemmer af skytteforeninger at registrere deres aktivitet på den lokale skydebane.
                     Vi <strong>stræber</strong> efter at være <strong>intuitive</strong>, <strong>brugervenlige</strong> og <strong>imødekommende</strong>, så registreringen bliver en <strong>enkel</strong> og <strong>ubesværet oplevelse</strong>.
                 </p>
@@ -83,6 +89,91 @@ require "settings/init.php";
     <!-- lg wave --> <svg class="d-none d-lg-block" id="visual" viewBox="0 0 2000 100" width="2000" height="100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><rect x="0" y="0" width="2000" height="100" fill="#f4f4f7"></rect><path d="M0 39L10.8 37.5C21.7 36 43.3 33 64.8 35.2C86.3 37.3 107.7 44.7 129.2 45.5C150.7 46.3 172.3 40.7 193.8 37.5C215.3 34.3 236.7 33.7 258.2 38.8C279.7 44 301.3 55 322.8 58.3C344.3 61.7 365.7 57.3 387.2 53.3C408.7 49.3 430.3 45.7 451.8 47.2C473.3 48.7 494.7 55.3 516.2 59.2C537.7 63 559.3 64 580.8 58.5C602.3 53 623.7 41 645.2 41.8C666.7 42.7 688.3 56.3 709.8 57C731.3 57.7 752.7 45.3 774.2 40.2C795.7 35 817.3 37 838.8 39.2C860.3 41.3 881.7 43.7 903.2 46.8C924.7 50 946.3 54 967.8 58.3C989.3 62.7 1010.7 67.3 1032.2 67.5C1053.7 67.7 1075.3 63.3 1096.8 56.5C1118.3 49.7 1139.7 40.3 1161.2 39.7C1182.7 39 1204.3 47 1225.8 49.2C1247.3 51.3 1268.7 47.7 1290.2 47.3C1311.7 47 1333.3 50 1354.8 50.5C1376.3 51 1397.7 49 1419.2 51.2C1440.7 53.3 1462.3 59.7 1483.8 57.5C1505.3 55.3 1526.7 44.7 1548.2 41.5C1569.7 38.3 1591.3 42.7 1612.8 45C1634.3 47.3 1655.7 47.7 1677.2 45.7C1698.7 43.7 1720.3 39.3 1741.8 38.7C1763.3 38 1784.7 41 1806.2 39.7C1827.7 38.3 1849.3 32.7 1870.8 29.8C1892.3 27 1913.7 27 1935.2 29.3C1956.7 31.7 1978.3 36.3 1989.2 38.7L2000 41L2000 0L1989.2 0C1978.3 0 1956.7 0 1935.2 0C1913.7 0 1892.3 0 1870.8 0C1849.3 0 1827.7 0 1806.2 0C1784.7 0 1763.3 0 1741.8 0C1720.3 0 1698.7 0 1677.2 0C1655.7 0 1634.3 0 1612.8 0C1591.3 0 1569.7 0 1548.2 0C1526.7 0 1505.3 0 1483.8 0C1462.3 0 1440.7 0 1419.2 0C1397.7 0 1376.3 0 1354.8 0C1333.3 0 1311.7 0 1290.2 0C1268.7 0 1247.3 0 1225.8 0C1204.3 0 1182.7 0 1161.2 0C1139.7 0 1118.3 0 1096.8 0C1075.3 0 1053.7 0 1032.2 0C1010.7 0 989.3 0 967.8 0C946.3 0 924.7 0 903.2 0C881.7 0 860.3 0 838.8 0C817.3 0 795.7 0 774.2 0C752.7 0 731.3 0 709.8 0C688.3 0 666.7 0 645.2 0C623.7 0 602.3 0 580.8 0C559.3 0 537.7 0 516.2 0C494.7 0 473.3 0 451.8 0C430.3 0 408.7 0 387.2 0C365.7 0 344.3 0 322.8 0C301.3 0 279.7 0 258.2 0C236.7 0 215.3 0 193.8 0C172.3 0 150.7 0 129.2 0C107.7 0 86.3 0 64.8 0C43.3 0 21.7 0 10.8 0L0 0Z" fill="#3a6fb0" stroke-linecap="round" stroke-linejoin="miter"></path></svg>
 </div>
 
+<div class="container bg-qGraa2 p-5 rounded-4"> <!-- Funktioner -->
+    <div class="row">
+        <div class="d-flex flex-column align-items-center gap-4">
+            <div class="bg-qBlaa rounded-4">
+                <p class="h3 text-center text-white p-2 m-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M3.675 11.1L10.8 1.60049C10.9397 1.41419 11.1209 1.26299 11.3292 1.15885C11.5375 1.05471 11.7671 1.00049 12 1.00049C12.2329 1.00049 12.4625 1.05471 12.6708 1.15885C12.8791 1.26299 13.0603 1.41419 13.2 1.60049L20.325 11.1C20.5197 11.3596 20.625 11.6754 20.625 12C20.625 12.3245 20.5197 12.6403 20.325 12.9L13.2 22.3995C13.0603 22.5858 12.8791 22.737 12.6708 22.8411C12.4625 22.9453 12.2329 22.9995 12 22.9995C11.7671 22.9995 11.5375 22.9453 11.3292 22.8411C11.1209 22.737 10.9397 22.5858 10.8 22.3995L3.675 12.9C3.48027 12.6403 3.375 12.3245 3.375 12C3.375 11.6754 3.48027 11.3596 3.675 11.1Z" fill="#F4F4F7"/>
+                    </svg>
+                    Laubær og Cheddarost
+                </p>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
+                <g clip-path="url(#clip0_63_229)">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M21.875 0C22.7038 0 23.4987 0.32924 24.0847 0.915291C24.6708 1.50134 25 2.2962 25 3.125V6.25H75V3.125C75 2.2962 75.3292 1.50134 75.9153 0.915291C76.5013 0.32924 77.2962 0 78.125 0C78.9538 0 79.7487 0.32924 80.3347 0.915291C80.9208 1.50134 81.25 2.2962 81.25 3.125V6.25H87.5C90.8152 6.25 93.9946 7.56696 96.3388 9.91117C98.683 12.2554 100 15.4348 100 18.75V87.5C100 90.8152 98.683 93.9946 96.3388 96.3388C93.9946 98.683 90.8152 100 87.5 100H12.5C9.18479 100 6.00537 98.683 3.66117 96.3388C1.31696 93.9946 0 90.8152 0 87.5V18.75C0 15.4348 1.31696 12.2554 3.66117 9.91117C6.00537 7.56696 9.18479 6.25 12.5 6.25H18.75V3.125C18.75 2.2962 19.0792 1.50134 19.6653 0.915291C20.2513 0.32924 21.0462 0 21.875 0V0ZM12.5 12.5C10.8424 12.5 9.25268 13.1585 8.08058 14.3306C6.90848 15.5027 6.25 17.0924 6.25 18.75V87.5C6.25 89.1576 6.90848 90.7473 8.08058 91.9194C9.25268 93.0915 10.8424 93.75 12.5 93.75H87.5C89.1576 93.75 90.7473 93.0915 91.9194 91.9194C93.0915 90.7473 93.75 89.1576 93.75 87.5V18.75C93.75 17.0924 93.0915 15.5027 91.9194 14.3306C90.7473 13.1585 89.1576 12.5 87.5 12.5H12.5Z" fill="black"/>
+                    <path d="M15.625 25C15.625 24.1712 15.9542 23.3763 16.5403 22.7903C17.1263 22.2042 17.9212 21.875 18.75 21.875H81.25C82.0788 21.875 82.8737 22.2042 83.4597 22.7903C84.0458 23.3763 84.375 24.1712 84.375 25V31.25C84.375 32.0788 84.0458 32.8737 83.4597 33.4597C82.8737 34.0458 82.0788 34.375 81.25 34.375H18.75C17.9212 34.375 17.1263 34.0458 16.5403 33.4597C15.9542 32.8737 15.625 32.0788 15.625 31.25V25ZM68.75 46.875C68.75 46.0462 69.0792 45.2513 69.6653 44.6653C70.2513 44.0792 71.0462 43.75 71.875 43.75H78.125C78.9538 43.75 79.7487 44.0792 80.3347 44.6653C80.9208 45.2513 81.25 46.0462 81.25 46.875V53.125C81.25 53.9538 80.9208 54.7487 80.3347 55.3347C79.7487 55.9208 78.9538 56.25 78.125 56.25H71.875C71.0462 56.25 70.2513 55.9208 69.6653 55.3347C69.0792 54.7487 68.75 53.9538 68.75 53.125V46.875ZM50 46.875C50 46.0462 50.3292 45.2513 50.9153 44.6653C51.5013 44.0792 52.2962 43.75 53.125 43.75H59.375C60.2038 43.75 60.9987 44.0792 61.5847 44.6653C62.1708 45.2513 62.5 46.0462 62.5 46.875V53.125C62.5 53.9538 62.1708 54.7487 61.5847 55.3347C60.9987 55.9208 60.2038 56.25 59.375 56.25H53.125C52.2962 56.25 51.5013 55.9208 50.9153 55.3347C50.3292 54.7487 50 53.9538 50 53.125V46.875ZM18.75 65.625C18.75 64.7962 19.0792 64.0013 19.6653 63.4153C20.2513 62.8292 21.0462 62.5 21.875 62.5H28.125C28.9538 62.5 29.7487 62.8292 30.3347 63.4153C30.9208 64.0013 31.25 64.7962 31.25 65.625V71.875C31.25 72.7038 30.9208 73.4987 30.3347 74.0847C29.7487 74.6708 28.9538 75 28.125 75H21.875C21.0462 75 20.2513 74.6708 19.6653 74.0847C19.0792 73.4987 18.75 72.7038 18.75 71.875V65.625ZM37.5 65.625C37.5 64.7962 37.8292 64.0013 38.4153 63.4153C39.0013 62.8292 39.7962 62.5 40.625 62.5H46.875C47.7038 62.5 48.4987 62.8292 49.0847 63.4153C49.6708 64.0013 50 64.7962 50 65.625V71.875C50 72.7038 49.6708 73.4987 49.0847 74.0847C48.4987 74.6708 47.7038 75 46.875 75H40.625C39.7962 75 39.0013 74.6708 38.4153 74.0847C37.8292 73.4987 37.5 72.7038 37.5 71.875V65.625Z" fill="black"/>
+                </g>
+                <defs>
+                    <clipPath id="clip0_63_229">
+                        <rect width="100" height="100" fill="white"/>
+                    </clipPath>
+                </defs>
+            </svg>
+            <p class="h5 mt-0">Bane oversigt og kalender</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="d-flex flex-column align-items-center gap-4">
+            <div class="bg-qBlaa rounded-4">
+                <p class="h3 text-center text-white p-2 m-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M3.675 11.1L10.8 1.60049C10.9397 1.41419 11.1209 1.26299 11.3292 1.15885C11.5375 1.05471 11.7671 1.00049 12 1.00049C12.2329 1.00049 12.4625 1.05471 12.6708 1.15885C12.8791 1.26299 13.0603 1.41419 13.2 1.60049L20.325 11.1C20.5197 11.3596 20.625 11.6754 20.625 12C20.625 12.3245 20.5197 12.6403 20.325 12.9L13.2 22.3995C13.0603 22.5858 12.8791 22.737 12.6708 22.8411C12.4625 22.9453 12.2329 22.9995 12 22.9995C11.7671 22.9995 11.5375 22.9453 11.3292 22.8411C11.1209 22.737 10.9397 22.5858 10.8 22.3995L3.675 12.9C3.48027 12.6403 3.375 12.3245 3.375 12C3.375 11.6754 3.48027 11.3596 3.675 11.1Z" fill="#F4F4F7"/>
+                    </svg>
+                    Laubær og Cheddarost
+                </p>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
+                <g clip-path="url(#clip0_63_229)">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M21.875 0C22.7038 0 23.4987 0.32924 24.0847 0.915291C24.6708 1.50134 25 2.2962 25 3.125V6.25H75V3.125C75 2.2962 75.3292 1.50134 75.9153 0.915291C76.5013 0.32924 77.2962 0 78.125 0C78.9538 0 79.7487 0.32924 80.3347 0.915291C80.9208 1.50134 81.25 2.2962 81.25 3.125V6.25H87.5C90.8152 6.25 93.9946 7.56696 96.3388 9.91117C98.683 12.2554 100 15.4348 100 18.75V87.5C100 90.8152 98.683 93.9946 96.3388 96.3388C93.9946 98.683 90.8152 100 87.5 100H12.5C9.18479 100 6.00537 98.683 3.66117 96.3388C1.31696 93.9946 0 90.8152 0 87.5V18.75C0 15.4348 1.31696 12.2554 3.66117 9.91117C6.00537 7.56696 9.18479 6.25 12.5 6.25H18.75V3.125C18.75 2.2962 19.0792 1.50134 19.6653 0.915291C20.2513 0.32924 21.0462 0 21.875 0V0ZM12.5 12.5C10.8424 12.5 9.25268 13.1585 8.08058 14.3306C6.90848 15.5027 6.25 17.0924 6.25 18.75V87.5C6.25 89.1576 6.90848 90.7473 8.08058 91.9194C9.25268 93.0915 10.8424 93.75 12.5 93.75H87.5C89.1576 93.75 90.7473 93.0915 91.9194 91.9194C93.0915 90.7473 93.75 89.1576 93.75 87.5V18.75C93.75 17.0924 93.0915 15.5027 91.9194 14.3306C90.7473 13.1585 89.1576 12.5 87.5 12.5H12.5Z" fill="black"/>
+                    <path d="M15.625 25C15.625 24.1712 15.9542 23.3763 16.5403 22.7903C17.1263 22.2042 17.9212 21.875 18.75 21.875H81.25C82.0788 21.875 82.8737 22.2042 83.4597 22.7903C84.0458 23.3763 84.375 24.1712 84.375 25V31.25C84.375 32.0788 84.0458 32.8737 83.4597 33.4597C82.8737 34.0458 82.0788 34.375 81.25 34.375H18.75C17.9212 34.375 17.1263 34.0458 16.5403 33.4597C15.9542 32.8737 15.625 32.0788 15.625 31.25V25ZM68.75 46.875C68.75 46.0462 69.0792 45.2513 69.6653 44.6653C70.2513 44.0792 71.0462 43.75 71.875 43.75H78.125C78.9538 43.75 79.7487 44.0792 80.3347 44.6653C80.9208 45.2513 81.25 46.0462 81.25 46.875V53.125C81.25 53.9538 80.9208 54.7487 80.3347 55.3347C79.7487 55.9208 78.9538 56.25 78.125 56.25H71.875C71.0462 56.25 70.2513 55.9208 69.6653 55.3347C69.0792 54.7487 68.75 53.9538 68.75 53.125V46.875ZM50 46.875C50 46.0462 50.3292 45.2513 50.9153 44.6653C51.5013 44.0792 52.2962 43.75 53.125 43.75H59.375C60.2038 43.75 60.9987 44.0792 61.5847 44.6653C62.1708 45.2513 62.5 46.0462 62.5 46.875V53.125C62.5 53.9538 62.1708 54.7487 61.5847 55.3347C60.9987 55.9208 60.2038 56.25 59.375 56.25H53.125C52.2962 56.25 51.5013 55.9208 50.9153 55.3347C50.3292 54.7487 50 53.9538 50 53.125V46.875ZM18.75 65.625C18.75 64.7962 19.0792 64.0013 19.6653 63.4153C20.2513 62.8292 21.0462 62.5 21.875 62.5H28.125C28.9538 62.5 29.7487 62.8292 30.3347 63.4153C30.9208 64.0013 31.25 64.7962 31.25 65.625V71.875C31.25 72.7038 30.9208 73.4987 30.3347 74.0847C29.7487 74.6708 28.9538 75 28.125 75H21.875C21.0462 75 20.2513 74.6708 19.6653 74.0847C19.0792 73.4987 18.75 72.7038 18.75 71.875V65.625ZM37.5 65.625C37.5 64.7962 37.8292 64.0013 38.4153 63.4153C39.0013 62.8292 39.7962 62.5 40.625 62.5H46.875C47.7038 62.5 48.4987 62.8292 49.0847 63.4153C49.6708 64.0013 50 64.7962 50 65.625V71.875C50 72.7038 49.6708 73.4987 49.0847 74.0847C48.4987 74.6708 47.7038 75 46.875 75H40.625C39.7962 75 39.0013 74.6708 38.4153 74.0847C37.8292 73.4987 37.5 72.7038 37.5 71.875V65.625Z" fill="black"/>
+                </g>
+                <defs>
+                    <clipPath id="clip0_63_229">
+                        <rect width="100" height="100" fill="white"/>
+                    </clipPath>
+                </defs>
+            </svg>
+            <p class="h5 mt-0">Bane oversigt og kalender</p>
+        </div>
+    </div>
+</div>
+
+<footer class="mt-5">
+
+</footer>
+
+<script>
+    // Function to interpolate between two colors
+    function interpolateColor(color1, color2, factor) {
+        return `rgb(${color1.map((c, i) => Math.round(c + factor * (color2[i] - c))).join(',')})`;
+    }
+
+    // Function to convert hex to RGB
+    function hexToRgb(hex) {
+        let bigint = parseInt(hex.slice(1), 16);
+        return [(bigint >> 16) & 255, (bigint >> 8) & 255, bigint & 255];
+    }
+
+    // Color transition setup
+    const colorStart = hexToRgb("#000"); // Start color (black)
+    const colorEnd = hexToRgb("#f4f4f7"); // End color (light gray)
+    const scrollEnd = 470; // Fixed scroll endpoint (when transition finishes)
+
+    // Scroll listener to change background color
+    window.addEventListener("scroll", () => {
+        let scrollTop = document.documentElement.scrollTop;
+
+        // Normalize the scroll value between 0 and 1 based on the fixed endpoint
+        let scrollFraction = Math.min(scrollTop / scrollEnd, 1);
+
+        // Apply the interpolated color
+        document.body.style.backgroundColor = interpolateColor(colorStart, colorEnd, scrollFraction);
+    });
+
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
