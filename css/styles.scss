@@ -14,13 +14,44 @@ $custom-colors: (
 	"qBlaa": #3a6fb0,
 	"qRod": #e63946,
 	"qGraa": #f4f4f7,
+	"qTest": #554412,
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
 @import "bootstrapComponents";
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 // 5. Du kan lave styling her...
 body {
-	//font-family: merrywethersans;
+	font-family: "Merriweather Sans", serif;
+}
+
+.montserrat{
+	font-family: "Montserrat", serif;
+}
+
+.landPageFS{
+	font-size: 20px;
+}
+
+.QDFormaal{
+	font-weight: 300;
+	line-height: 26px;
+}
+
+.maxImgSize{
+	max-width: 270px;
+}
+
+@media screen and (min-width: 768px) { // Det her er et md breakpoint
+	.landPageFS{
+		font-size: 26px;
+	}
+}
+
+@media screen and (min-width: 992px) { // Det her er et lg breakpoint
+	.landPageFS{
+		font-size: 32px;
+	}
 }
