@@ -37,23 +37,14 @@ require "settings/init.php";
 </div>
 
 <footer>
-    <nav class="navbar">
-        <div class="container-fluid bg-qBlaa">
-            <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active text-white" aria-current="page" href="#">Inbox</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Booking</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Support</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+
+    <div class="bg-qBlaa d-flex justify-content-evenly">
+        <a class="nav-link active text-white" aria-current="page" href="#">Inbox</a>
+            <span class="text-white">|</span>
+        <a class="nav-link text-white" href="#">Booking</a>
+            <span class="text-white">|</span>
+        <a class="nav-link text-white" href="#">Support</a>
+    </div>
 
 </footer>
 
