@@ -172,12 +172,12 @@ require "settings/init.php";
 
 <!-- Background dims -->
 <script>
-    // Function to interpolate between two colors
+    // Laver en transition mellem to givne farver med en factor som er 0 til 1
     function interpolateColor(color1, color2, factor) {
         return `rgb(${color1.map((c, i) => Math.round(c + factor * (color2[i] - c))).join(',')})`;
     }
 
-    // Function to convert hex to RGB
+    // Laver hex color codes om til rgb da JavaScript ikke fungere med hexidecimal
     function hexToRgb(hex) {
         let bigint = parseInt(hex.slice(1), 16);
         return [(bigint >> 16) & 255, (bigint >> 8) & 255, bigint & 255];
@@ -186,16 +186,16 @@ require "settings/init.php";
     // Color transition setup
     const colorStart = hexToRgb("#000"); // Start color (black)
     const colorEnd = hexToRgb("#f4f4f7"); // End color (light gray)
-    const scrollEnd = 470; // Fixed scroll endpoint (when transition finishes)
+    const scrollEnd = 470; // Slut punkt for farve transitionen
 
-    // Scroll listener to change background color
+    // Tilføjer en scroll Eventlistener til window(sidens fane)
     window.addEventListener("scroll", () => {
         let scrollTop = document.documentElement.scrollTop;
 
         // Normalize the scroll value between 0 and 1 based on the fixed endpoint
         let scrollFraction = Math.min(scrollTop / scrollEnd, 1);
 
-        // Apply the interpolated color
+        // Anvend farven på bodyen
         document.body.style.backgroundColor = interpolateColor(colorStart, colorEnd, scrollFraction);
     });
 
