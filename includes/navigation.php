@@ -1,4 +1,4 @@
-<footer>
+<footer class="mt-auto">
     <div class="bg-qBlaa d-flex justify-content-evenly">
         <a class="nav-link active text-white" aria-current="page" href="#">Inbox</a>
         <span class="text-white">|</span>
