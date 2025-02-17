@@ -64,6 +64,11 @@ require "settings/init.php";
         <label class="mt-2" for="name">Navn</label>
         <input class="form-control" type="text" id="name">
     </div>
+
+    <div> <!-- Email Forms -->
+        <label class="mt-2" for="email">Email</label>
+        <input class="form-control" type="email" id="email">
+    </div>
     
     <div> <!-- Calender -->
         <label class="mt-2" for="kalender">Kalender</label>
