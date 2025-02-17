@@ -35,19 +35,9 @@ require "settings/init.php";
     <p> halajsa</p>
 </div>
 
-<footer>
-
-    <div class="bg-qBlaa d-flex justify-content-evenly">
-        <a class="nav-link active text-white" aria-current="page" href="#">Inbox</a>
-            <span class="text-white">|</span>
-        <a class="nav-link text-white" href="#">Booking</a>
-            <span class="text-white">|</span>
-        <a class="nav-link text-white" href="#">Support</a>
-    </div>
-
-</footer>
-
-
+<?php
+include("includes/navigation.php");
+?>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
