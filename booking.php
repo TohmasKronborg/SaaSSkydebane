@@ -61,16 +61,18 @@ if (!empty($_POST["data"])) {
 </head>
 <body class="d-flex flex-column">
 
-<div class="text-center bg-qBlaa pb-3 pt-3">
-    <img src="images/whitelogo.png" class="img-fluid" alt="logo" width="179" height="75">
-</div>
+<?php
+include("includes/logoHeader.php");
+?>
 
-<div class="container-fluid mt-3 mb-3">
-    <h1 class="text-center">Booking</h1>
+<h1 class="text-center m-0 mt-2">Booking</h1>
+
+<div class="p-2 m-3 bg-qGraa rounded-4">
     <form action="booking.php" method="post">
         <div class="mb-3">
             <label for="laneId">Vælg bane type</label>
-            <select name="data[lane_id]" id="laneId" class="form-select">
+            <select name="data[lane_id]" id="laneId" class="form-select shadow-sm" required>
+                <option value="">Bane Type</option>
                 <option value="1">50 meter Udendørs</option>
                 <option value="2">100 meter Udendørs</option>
                 <option value="3">50 meter Indendørs</option>
@@ -80,7 +82,7 @@ if (!empty($_POST["data"])) {
 
         <div class="mb-3">
             <label for="firearm">Vælg våben type</label>
-            <select class="form-select" id="firearm" name="data[firearm_id]" required>
+            <select class="form-select shadow-sm" id="firearm" name="data[firearm_id]" required>
                 <option selected>Våben type</option>
                 <option value="1">Luftgevær</option>
                 <option value="2">Luftpistol</option>
@@ -93,25 +95,30 @@ if (!empty($_POST["data"])) {
 
         <!-- Name Input (Reverted to previous version) -->
         <div>
-            <label class="mt-2" for="name">Navn</label>
-            <input class="form-control" type="text" id="name" name="data[user_name]">
+                <label for="name">Bookers navn</label>
+            <input class="form-control shadow-sm" type="text" id="name" name="data[user_name]" required>
         </div>
 
         <!-- Reservation Time -->
         <div>
-            <label class="mt-2" for="kalender">Kalender</label>
-            <input class="form-control" type="datetime-local" id="kalender" name="data[reservation_time]" required>
+            <label class="mt-2" for="kalender">Dato og Tid</label>
+            <input class="form-control shadow-sm" type="datetime-local" id="kalender" name="data[reservation_time]" required>
         </div>
 
-        <label for="check_status" class="mt-2">Check Status</label>
-        <input type="checkbox" id="check_status" name="data[check_status]" value="1">
+        <div class="d-flex gap-2 mt-2">
+            <label for="check_status">Checket ind</label>
+            <input type="checkbox" id="check_status" name="data[check_status]" value="1" class="form-check m-0">
+        </div>
 
-        <label for="payment_check" class="mt-2">Payment Status</label>
-        <input type="checkbox" id="payment_check" name="data[payment_status]" value="1">
+        <div class="d-flex gap-2 mt-2">
+            <label for="payment_check">Betalt</label>
+            <input type="checkbox" id="payment_check" name="data[payment_status]" value="1" class="form-check m-0">
+        </div>
+
 
         <!-- Submit Button -->
-        <div class="col-12 d-flex justify-content-center mt-2">
-            <button type="submit" class="btn btn-qBlaa">Submit</button>
+        <div class="m-2 mt-4">
+            <button type="submit" class="btn btn-qRod fs-4 text-white">Book</button>
         </div>
     </form>
 
