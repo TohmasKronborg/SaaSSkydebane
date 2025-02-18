@@ -73,10 +73,20 @@ include("includes/logoHeader.php");
             <label for="laneId">Vælg bane type</label>
             <select name="data[lane_id]" id="laneId" class="form-select shadow-sm" required>
                 <option value="">Bane Type</option>
-                <option value="1">50 meter Udendørs</option>
-                <option value="2">100 meter Udendørs</option>
-                <option value="3">50 meter Indendørs</option>
-                <option value="4">100 meter Indendørs</option>
+                <?php
+                $sqlLane = "SELECT * FROM lanes";
+                $lanes = $db->sql($sqlLane);
+                foreach($lanes as $lane) {
+                    ?>
+                    <option value="<?php echo $lane->lane_id; ?>"><?php echo $lane->lane_name; ?></option>
+                    <?php
+                }
+                ?>
+
+<!--                <option value="1">50 meter Udendørs</option>-->
+<!--                <option value="2">100 meter Udendørs</option>-->
+<!--                <option value="3">50 meter Indendørs</option>-->
+<!--                <option value="4">100 meter Indendørs</option>-->
             </select>
         </div>
 
@@ -84,12 +94,15 @@ include("includes/logoHeader.php");
             <label for="firearm">Vælg våben type</label>
             <select class="form-select shadow-sm" id="firearm" name="data[firearm_id]" required>
                 <option selected>Våben type</option>
-                <option value="1">Luftgevær</option>
-                <option value="2">Luftpistol</option>
-                <option value="3">Salonriffel</option>
-                <option value="4">Grov kaliber</option>
-                <option value="5">Salonpistol</option>
-                <option value="6">Grovpistol</option>
+                <?php
+                $sqlFirearm = "SELECT * FROM firearms";
+                $firearms = $db->sql($sqlFirearm);
+                foreach($firearms as $firearm) {
+                    ?>
+                    <option value="<?php echo $firearm->firearm_id; ?>"><?php echo $firearm->firearm_name; ?></option>
+                    <?php
+                }
+                ?>
             </select>
         </div>
 

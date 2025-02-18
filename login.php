@@ -1,6 +1,40 @@
 <?php
 require "settings/init.php";
+
+// Define variables to store results
+$resultMessage = '';
+$resultType = ''; // Success or error message type (for styling if needed)
+
+if (!empty($_POST["data"])) {
+    $data = $_POST["data"];
+    $inputUsername = trim($data["username"]);
+
+    // Query for the user
+    $sql = "SELECT username, password FROM users WHERE username = :username";
+    $bind = [":username" => $inputUsername];
+    $stmt = $db->sql($sql, $bind, false);
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if ($user) {
+        $inputPassword = trim($data["password"]);
+        $storedHash = trim($user["password"]);
+
+        // Temporary check for password verification (use password_verify() in production)
+        if ($inputPassword === $storedHash) {
+            // Redirect to forside.php on successful login
+            header("Location: forside.php");
+            exit(); // Make sure no further code is executed after redirect
+        } else {
+            $resultMessage = "Forkert password";
+            $resultType = "error"; // Error message type (e.g., red text)
+        }
+    } else {
+        $resultMessage = "Brugernavn ikkue fundet";
+        $resultType = "error"; // Error message type (e.g., red text)
+    }
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="da">
 <head>
@@ -29,9 +63,10 @@ require "settings/init.php";
             <p class="h2">Log ind</p>
         </div>
     </div>
+
     <div class="row">
         <div class="col d-flex justify-content-center m-3 bg-qGraa p-2 flex-column">
-            <form action="login.php" method="get">
+            <form action="login.php" method="POST">
                 <div class="mb-3">
                     <label for="username" class="form-label">Brugernavn</label>
                     <input type="text" class="form-control shadow-sm" id="username" aria-describedby="username" maxlength="50" name="data[username]">
@@ -42,6 +77,11 @@ require "settings/init.php";
                 </div>
                 <button type="submit" class="btn btn-qRod text-white shadow-sm">Log ind</button>
             </form>
+
+            <?php if (!empty($resultMessage)): ?>
+                <p class="<?php echo $resultType; ?> mt-2"><?php echo $resultMessage; ?></p>
+            <?php endif; ?>
+
             <p class="mt-3 justify-content-center d-flex">Har du ingen konto? <br></p>
             <a class="d-flex mt-0 mb-3 justify-content-center" href="registrer.php">Klik her for at registrére en konto!</a>
         </div>
