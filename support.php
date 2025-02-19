@@ -24,9 +24,9 @@ require "settings/init.php";
 
 </head>
 
-<div class="text-center bg-darkblue p-4">
-    <img src="images/whitelogo.png" class="img-fluid" alt="logo">
-</div>
+<?php
+include("includes/logoHeader.php");
+?>
 
 
 <body>
@@ -64,18 +64,9 @@ require "settings/init.php";
 
 </div>
 
-
-<footer>
-
-    <div class="bg-darkblue d-flex justify-content-evenly">
-        <a class="nav-link active text-white" aria-current="page" href="forside.php">Inbox</a>
-            <span class="text-white">|</span>
-        <a class="nav-link text-white" href="booking.php">Booking</a>
-            <span class="text-white">|</span>
-        <a class="nav-link text-white" href="support.php">Support</a>
-    </div>
-
-</footer>
+<?php
+include("includes/navigation.php");
+?>
 
 
 
