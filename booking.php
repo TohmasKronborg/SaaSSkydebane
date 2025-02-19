@@ -8,10 +8,8 @@ require "settings/init.php";
 if (!empty($_POST["data"])) {
     $data = $_POST['data'];
 
-    // Ensure that other required fields are set
     if (isset($data["user_name"], $data["lane_id"], $data["firearm_id"], $data["reservation_time"])) {
 
-        // Check if the checkboxes are checked and set them to 1 if checked, 0 if not
         $check_status = isset($data['check_status']) ? 1 : 0;
         $payment_status = isset($data['payment_status']) ? 1 : 0;
 
@@ -27,14 +25,11 @@ if (!empty($_POST["data"])) {
             ":payment_status" => $payment_status
         ];
 
-        // Execute SQL query
         $db->sql($sql, $bind, false);
 
-        // Confirmation message
         echo "Booking added! <a href='forside.php'>Til forside</a>";
         exit;
     } else {
-        // Handle missing required fields (optional)
         echo "Missing required fields!";
     }
 }
@@ -59,6 +54,20 @@ if (!empty($_POST["data"])) {
         }
     </style>
 </head>
+
+<!--
+.▄▄▄  ▄• ▄▌▪   ▄▄· ▄ •▄
+▐▀•▀█ █▪██▌██ ▐█ ▌▪█▌▄▌▪
+█▌·.█▌█▌▐█▌▐█·██ ▄▄▐▀▀▄·
+▐█▪▄█·▐█▄█▌▐█▌▐███▌▐█.█▌
+·▀▀█.  ▀▀▀ ▀▀▀·▀▀▀ ·▀  ▀
+·▄▄▄▄  ▄▄▄   ▄▄▄· ▄▄▌ ▐ ▄▌
+██▪ ██ ▀▄ █·▐█ ▀█ ██· █▌▐█
+▐█· ▐█▌▐▀▀▄ ▄█▀▀█ ██▪▐█▐▐▌
+██. ██ ▐█•█▌▐█ ▪▐▌▐█▌██▐█▌
+▀▀▀▀▀• .▀  ▀ ▀  ▀  ▀▀▀▀ ▀▪
+-->
+
 <body class="d-flex flex-column">
 
 <?php
@@ -82,11 +91,6 @@ include("includes/logoHeader.php");
                     <?php
                 }
                 ?>
-
-<!--                <option value="1">50 meter Udendørs</option>-->
-<!--                <option value="2">100 meter Udendørs</option>-->
-<!--                <option value="3">50 meter Indendørs</option>-->
-<!--                <option value="4">100 meter Indendørs</option>-->
             </select>
         </div>
 
