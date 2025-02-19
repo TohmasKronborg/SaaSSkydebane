@@ -19,25 +19,56 @@ require "settings/init.php";
     <link href="css/styles.css" rel="stylesheet" type="text/css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
 </head>
+
+<?php
+include("includes/logoHeader.php");
+?>
+
 
 <body>
 
-<div class="text-center bg-qBlaa pb-3 pt-3">
-    <img src="images/whitelogo.png" class="img-fluid" alt="logo">
+<div class=" d-flex justify-content-center pt-5 pb-3 Montserat">
+    <h1 class="fw-bold">Har du brug for hjælp?</h1>
 </div>
 
-<div>
-    <p> halajsa</p>
-    <p> halajsa</p>
-    <p> halajsa</p>
-    <p> halajsa</p>
-    <p> halajsa</p>
+
+<div class="bg-qGraa mx-4 mt-2 mb-4">
+    <div class="d-flex flex-column align-items-center container-fluid pb-4 pt-3">
+        <div>
+            <h1 class="fw-bold"> Åbningstider </h1>
+            <h4 class="fw-light"> Hverdage: 17.00 - 20.00</h4>
+            <h4 class="fw-light"> Lørdag: Lukket </h4>
+            <h4 class="fw-light"> Søndag: 17.00-20.00 </h4>
+        </div>
+    </div>
+
+    <div class="d-flex flex-column align-items-center container-fluid py-5">
+        <div>
+            <h1 class="fw-bold"> Adresse</h1>
+            <h4 class="fw-normal"> Tingsted Skytteforening </h4>
+            <h4 class="fw-light"> Østergade 54 <br> 4863 Eskilstrup </h4>
+        </div>
+    </div>
+
+    <div class="d-flex flex-column align-items-center container-fluid py-5">
+        <div>
+            <h1 class="fw-bold"> Kontakt os </h1>
+            <h4 class="fw-light"> Tlf: 49 52 11 22 </h4>
+            <h4 class="fw-light"> Hverdage: 17.00 - 20.00</h4>
+        </div>
+    </div>
+
 </div>
 
 <?php
 include("includes/navigation.php");
 ?>
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
