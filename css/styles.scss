@@ -69,8 +69,17 @@ body{
 	max-width: 270px;
 }
 
-.bookingBox{
+.infoboxMainPage{
 	max-height: 300px;
+}
+
+.announcement{
+	max-height: 250px;
+}
+
+.announcementImg {
+	max-height: 170px;
+	max-width: 170px;
 }
 
 @media screen and (min-width: 768px) { // Det her er et md breakpoint

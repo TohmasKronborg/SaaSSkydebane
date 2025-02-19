@@ -46,7 +46,7 @@ include("includes/logoHeader.php");
 
 <h1 class="fw-bold d-flex justify-content-center pt-4 pb-2 ">Bookede tider</h1>
 <!-- Box til announcements -->
-<div class="bookingBox overflow-y-scroll rounded-4 m-2 border border-5 border-qBlaa shadow">
+<div class="infoboxMainPage overflow-y-scroll rounded-4 m-2 border border-5 border-qBlaa shadow">
     <?php
     $sqlAdd = "";
     $bind = [];
@@ -83,6 +83,35 @@ include("includes/logoHeader.php");
 
 <h1 class="fw-bold d-flex justify-content-center pt-4 pb-2 ">Nyheder</h1>
 
+<div class="container">
+    <div class="row">
+        <div class="col d-flex justify-content-center m-3 mt-0 p-3 rounded-4 flex-column">
+            <div class="infoboxMainPage overflow-y-scroll rounded-4 m-2 border border-5 border-qBlaa shadow">
+                <div class="announcement border border-2 border-qGraa2 rounded-1 p-3 m-2 d-flex flex-reverse">
+                    <div class="col">
+                        <p class="h4">Tilmelding til forårsturnering</p>
+                        <p class="fw-light">Tingsted Skytteforening • 10-02-2025</p>
+                        <p>Tilmelding til forårsturneringen er nu åben. Du kan tilmelde dig hos skytteforeningen, indtil d. 3. marts.</p>
+                    </div>
+                </div>
+                <div class="announcement border border-2 border-qGraa2 rounded-1 p-3 m-2 d-flex flex-reverse">
+                    <div class="col">
+                        <p class="h4">Opstart 2025</p>
+                        <p class="fw-light">Tingsted Skytteforening • 15-01-2025</p>
+                        <p>Skytteforeningen åbner igen i starten af februar. Du kan booke tider til opstart nu.</p>
+                    </div>
+                </div>
+                <div class="announcement border border-2 border-qGraa2 rounded-1 p-3 m-2 d-flex flex-reverse">
+                    <div class="col">
+                        <p class="h4">Juleafslutning</p>
+                        <p class="fw-light">Tingsted Skytteforening • 08-12-2024</p>
+                        <p>Vi holder juleafslutning d. 20 december! Det er helt gratis at tilmelde hvis du allerede er medlem.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
