@@ -1,15 +1,18 @@
 <?php
+/**
+ * @var db $db
+ */
+
 require "settings/init.php";
 
-// Define variables to store results
+// Definere variabler til at holde på resultaterne
 $resultMessage = '';
-$resultType = ''; // Success or error message type (for styling if needed)
 
 if (!empty($_POST["data"])) {
     $data = $_POST["data"];
     $inputUsername = trim($data["username"]);
 
-    // Query for the user
+    // Query for brugeren
     $sql = "SELECT username, password FROM users WHERE username = :username";
     $bind = [":username" => $inputUsername];
     $stmt = $db->sql($sql, $bind, false);
@@ -19,18 +22,15 @@ if (!empty($_POST["data"])) {
         $inputPassword = trim($data["password"]);
         $storedHash = trim($user["password"]);
 
-        // Temporary check for password verification (use password_verify() in production)
         if ($inputPassword === $storedHash) {
             // Redirect to forside.php on successful login
             header("Location: forside.php");
-            exit(); // Make sure no further code is executed after redirect
+            exit(); // Stopper koden efter redirect
         } else {
             $resultMessage = "Forkert password";
-            $resultType = "error"; // Error message type (e.g., red text)
         }
     } else {
-        $resultMessage = "Brugernavn ikkue fundet";
-        $resultType = "error"; // Error message type (e.g., red text)
+        $resultMessage = "Brugernavn ikke fundet";
     }
 }
 ?>
@@ -51,11 +51,24 @@ if (!empty($_POST["data"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
+<!--
+.▄▄▄  ▄• ▄▌▪   ▄▄· ▄ •▄
+▐▀•▀█ █▪██▌██ ▐█ ▌▪█▌▄▌▪
+█▌·.█▌█▌▐█▌▐█·██ ▄▄▐▀▀▄·
+▐█▪▄█·▐█▄█▌▐█▌▐███▌▐█.█▌
+·▀▀█.  ▀▀▀ ▀▀▀·▀▀▀ ·▀  ▀
+·▄▄▄▄  ▄▄▄   ▄▄▄· ▄▄▌ ▐ ▄▌
+██▪ ██ ▀▄ █·▐█ ▀█ ██· █▌▐█
+▐█· ▐█▌▐▀▀▄ ▄█▀▀█ ██▪▐█▐▐▌
+██. ██ ▐█•█▌▐█ ▪▐▌▐█▌██▐█▌
+▀▀▀▀▀• .▀  ▀ ▀  ▀  ▀▀▀▀ ▀▪
+-->
+
 <body>
 
-<div class="text-center bg-qBlaa ps-5 pe-5 pt-3 pb-3">
-    <img src="images/whitelogo.png" class="img-fluid" alt="logo">
-</div>
+<?php
+include("includes/logoHeaderLoginRegistrer.php");
+?>
 
 <div class="container">
     <div class="row">
@@ -65,7 +78,7 @@ if (!empty($_POST["data"])) {
     </div>
 
     <div class="row">
-        <div class="col d-flex justify-content-center m-3 bg-qGraa p-2 flex-column">
+        <div class="col d-flex justify-content-center m-3 mt-0 bg-qGraa p-3 rounded-4 flex-column">
             <form action="login.php" method="POST">
                 <div class="mb-3">
                     <label for="username" class="form-label">Brugernavn</label>
@@ -79,7 +92,7 @@ if (!empty($_POST["data"])) {
             </form>
 
             <?php if (!empty($resultMessage)): ?>
-                <p class="<?php echo $resultType; ?> mt-2"><?php echo $resultMessage; ?></p>
+                <p class="mt-2"><?php echo $resultMessage; ?></p>
             <?php endif; ?>
 
             <p class="mt-3 justify-content-center d-flex">Har du ingen konto? <br></p>

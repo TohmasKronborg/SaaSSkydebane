@@ -43,6 +43,7 @@ require "settings/init.php";
     </div>
 </nav>
 
+<!-- Intro / Velkomst -->
 <div class="container-fluid pb-5 blackBox">
     <div class="row text-center pt-5 pb-5">
         <h1 class="text-white landPageFS">Gør dine bookinger og aktivitet registreringer lette<br>og kom i gang med det samme!</h1>
@@ -60,10 +61,11 @@ require "settings/init.php";
     </div>
 </div>
 
+<!-- Billeder -->
 <div class="d-flex justify-content-center p-3 isolation position-relative">
-    <img class="img-fluid d-none d-lg-block rounded-4 me-4" src="images/+.jpg" alt="chad" width="491" height="550">
-    <img class="img-fluid d-none d-lg-block position-absolute start-75 top-50 translate-middle" src="images/Bliss1.png" alt="bliss">
-    <img class="img-fluid d-lg-none" src="images/Bliss1.png" alt="bliss">
+    <img class="img-fluid d-none d-lg-block rounded-4 me-5" src="images/AdobeStock_182169715_Preview.jpeg" alt="chad" width="721" height="500">
+    <img class="img-fluid d-none d-lg-block position-absolute start-75 top-50 translate-middle rounded-4" src="images/Booking.png" alt="bliss" width="272" height="600">
+    <img class="img-fluid d-lg-none rounded-4" src="images/Booking.png" alt="bliss">
 </div>
 
 <div class="overflow-x-hidden"> <!-- Blue waves section -->
@@ -166,10 +168,6 @@ require "settings/init.php";
     </div>
 </div>
 
-<footer class="mt-5">
-
-</footer>
-
 <!-- Background dims -->
 <script>
     // Laver en transition mellem to givne farver med en factor som er 0 til 1
@@ -186,7 +184,7 @@ require "settings/init.php";
     // Color transition setup
     const colorStart = hexToRgb("#000"); // Start color (black)
     const colorEnd = hexToRgb("#f4f4f7"); // End color (light gray)
-    const scrollEnd = 470; // Slut punkt for farve transitionen
+    const scrollEnd = 450; // Slut punkt for farve transitionen
 
     // Tilføjer en scroll Eventlistener til window(sidens fane)
     window.addEventListener("scroll", () => {
