@@ -42,7 +42,7 @@ require "settings/init.php";
             <h1 class="fw-bold"> Åbningstider </h1>
             <h4 class="fw-light"> Hverdage: 17.00 - 20.00</h4>
             <h4 class="fw-light"> Lørdag: Lukket </h4>
-            <h4 class="fw-light"> Søndag: 18.00-20.00 </h4>
+            <h4 class="fw-light"> Søndag: 17.00-20.00 </h4>
         </div>
     </div>
 
