@@ -38,7 +38,7 @@ require "settings/init.php";
     <a href="#" class="d-none d-md-block"><img src="images/whitelogo.png" alt="Logo" width="138" height="58"></a>
     <a href="#" class="d-md-none"><img src="images/QuickDrawLogoWhite.png" alt="Logo" width="38" height="40"></a>
     <div class="d-flex justify-content-between align-items-center w-md-25 gap-3">
-        <a href="#" class="text-white">Log ind</a>
+        <a href="forside.php" class="text-white">Log ind</a>
         <a href="registrer.php" class="rounded-3 bg-primary p-2 pe-3 ps-3 text-white">Tilmeld</a>
     </div>
 </nav>
@@ -51,11 +51,11 @@ require "settings/init.php";
 
     <div class="row justify-content-center gap-5">
         <div class="col-12 col-md-4 text-center">
-            <a href="#" class="bg-qBlaa text-white p-4 text-nowrap rounded-3 fs-4">Tilmeld dig nu &#x21c0;</a>
+            <a href="registrer.php" class="bg-qBlaa text-white p-4 text-nowrap rounded-3 fs-4">Tilmeld dig nu &#x21c0;</a>
         </div>
 
         <div class="col-12 col-md-4 text-center">
-            <a href="#" class="text-white fs-4">Find bookninger &#x21c0;</a>
+            <a href="forside.php" class="text-white fs-4">Find bookninger &#x21c0;</a>
         </div>
     </div>
 </div>
